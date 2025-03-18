@@ -339,3 +339,12 @@ describe('Verify retrieving author by an ID', () => {
         expect(authorId).toBeNull();
     });
 });
+
+
+//One limitation of these tests is that
+//  they only validate schema rules and 
+// virtual properties in-memory using `validateSync()` and mocks. 
+// They don't test real database operations like saving, 
+// retrieving, or querying data in MongoDB,
+//  which could lead to missed issues related to indexing, 
+// constraints, or actual data persistence.
